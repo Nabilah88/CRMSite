@@ -1,0 +1,61 @@
+{% extends 'accounts/main.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organization Profile</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Organization Profile Card -->
+        <div class="profile-card">
+            <img src="{% static 'images/logo.jpg' %}" alt="Organization Logo">
+            <div class="info">
+                <h2>Organization Name</h2>
+                <p>Website: <a href="#">www.organizationwebsite.com</a></p>
+                <p>Email: contact@organization.com</p>
+                <p>Address: 123 Main Street, City, Country</p>
+            </div>
+        </div>
+
+        <!-- Organization Services Summary -->
+        <div class="services-section">
+            <h3>Summary of Services</h3>
+            <p>Service 1: Description of the service.</p>
+            <p>Service 2: Description of the service.</p>
+            <p>Service 3: Description of the service.</p>
+        </div>
+
+        <!-- New Post Section -->
+        <div class="new-post">
+            <h3>Create a New Post</h3>
+            <textarea rows="4" placeholder="Share updates, news, or announcements..."></textarea>
+            <button>Post</button>
+        </div>
+
+        <!-- Posts Section -->
+        <div class="posts-section">
+            <h3>Organization Posts</h3>
+
+            <!-- Post 1 -->
+            <div class="post">
+                <h4>Recent Post</h4>
+                <p>{% for i in posts %} 
+                
+                       {{i.org_post}}
+                    {% endfor %}
+                </p>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
+
+{% endblock %}

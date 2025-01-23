@@ -1,0 +1,78 @@
+<style>
+
+    /* Custom card background colors */
+    .total-orders {
+        background-color: deepskyblue;
+    }
+
+    .orders-delivered {
+        background-color: dodgerblue;
+    }
+
+    .orders-pending {
+        background-color: cadetblue;
+    }
+    /* Ensuring text is readable on colored backgrounds */
+
+    .card-header, .card-body {
+        color: cornflowerblue;
+    }
+    /* Margin adjustments for better spacing */
+
+    .row {
+        margin-top: 20px;
+    }
+    /* Additional styles for a more polished look */
+
+    .card {
+        border: none; /* Remove card borders */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    }
+
+    .card-title {
+        margin-bottom: 0;
+    }
+</style>
+
+<br>
+
+<div class="row">
+	<div class="col">
+		<div class="col-md">
+			<div class="card text-center text-black  mb-3" id="total-orders">
+			  	<div class="card-header">
+			  		<h5 class="card-title">Total Orders</h5>
+			  	</div>
+			  	<div class="card-body">
+			    	<h3 class="card-title">{{total_order}}</h3>
+			  	</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col">
+		<div class="col-md">
+			<div class="card text-center text-black  mb-3" id="orders-delivered">
+			  	<div class="card-header">
+			  		<h5 class="card-title">Orders Delivered</h5>
+			  	</div>
+			  	<div class="card-body">
+			    	<h3 class="card-title">{{delivered}}</h3>
+			  	</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col">
+		<div class="col-md">
+			<div class="card text-center text-black  mb-3" id="orders-pending">
+			  	<div class="card-header">
+			  		<h5 class="card-title">Orders Pending</h5>
+			  	</div>
+			  	<div class="card-body">
+			    	<h3 class="card-title">{{pending}}</h3>
+			  	</div>
+			</div>
+		</div>
+	</div>
+</div>
